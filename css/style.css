@@ -1,0 +1,209 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    --black-color: black;
+    --white-color: white;
+    --background: #f1f1f1;
+}
+
+/* ====================================================== */
+
+.app{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.banner{
+    max-width: 1500px;
+    margin: auto;
+    position: relative;
+}
+
+.banner__img{
+    width: 100%;
+    height: auto;
+}
+
+.banner__img img{
+    width: 100%;
+}
+
+.banner__info{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--white-color);
+    padding: 16px 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.banner__info-name,
+.banner__info-job{
+    display: inline-block;
+    color: var(--white-color);
+    padding: 26px 14px;
+    letter-spacing: 5px;
+    z-index: 1;
+}
+
+.banner__info-name{
+    font-size: 4rem;
+}
+
+.banner__info-job{
+    font-size: 2.2rem;
+}
+
+.banner__navbar{
+    display: flex;
+    position: absolute;
+    /* bottom: -2%; */
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.banner__navbar-option{
+    padding: 12px 20px;
+    background-color: var(--background);
+    font-size: 1.4rem;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.banner__navbar-option:hover{
+    background-color: #ccc;
+}
+
+.banner__navbar :first-child{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.banner__navbar :last-child{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* content */
+.content__img{
+    width: 100%;
+    height: auto;
+    margin-top: 16px;
+}
+
+.content__img img{
+    width: 100%;
+}
+
+.content__contact{
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+    background-clip: content-box;
+}
+
+h3{
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 400;
+    padding: 50px 0;
+}
+
+p{
+    font-size: 1.8rem;
+    padding: 8px 22px;
+    line-height: 2.6rem;
+    font-weight: 400;
+}
+
+.content__contact-form{
+    display: flex;
+    flex-direction: column;
+    padding: 0 22px;
+}
+
+.content__contact-form label{
+    font-size: 1.6rem;
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+.content__contact-form input{
+    padding: 10px 8px;
+    font-size: 1.8rem;
+}
+
+.content__contact-btn{
+    text-align: center;
+    padding: 12px 0;
+    margin: 24px 0;
+    border: none;
+    background-color: #616161;
+    font-size: 1.8rem;
+    color: var(--white-color);
+}
+
+.end{
+    padding: 12px 22px 36px;
+    font-size: 1.8rem;
+}
+
+.end a{
+    color: var(--black-color);
+}
+
+/* ==============================responsive============================== */
+@media (max-width: 729px)
+{
+    .banner__info{
+        padding: 8px 8px;
+    }
+    .banner__info-name{
+        font-size: 1.6rem;
+        display: inline-block;
+        color: #adb7b4;
+        padding: 12px 6px;
+        letter-spacing: 2px;
+        z-index: 1;
+    }
+    .banner__info-job{
+        display: none;  
+    }
+    .banner__navbar{
+        position: relative;
+        box-sizing: inherit;
+        width: 100%;
+        background-color: var(--background);
+        padding: 14px 20px;
+        top: -3px;
+        justify-content: space-between;
+    }
+    .banner__navbar-option{
+        padding: 12px 30px;
+        font-size: 1.6rem;
+    }
+
+    p{
+        font-size: 1.4rem;
+    }
+
+    .content__img{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
